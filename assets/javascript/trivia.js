@@ -41,8 +41,27 @@ $(document).ready(function(){
 	$('.well-sm').click(function(){
 		
 	});
-question1();
+start();
 });
+
+function start(){
+	$('.start').append('<button type="button" id="startButton">START</button>');
+	$('.wellq1').hide();
+	$('.wella1').hide();
+	$('.wella2').hide();
+	$('.wella3').hide();
+	$('.wella4').hide();
+	$('#startButton').click(function(){
+		question1();
+		console.log('start');
+	$('.wellq1').show();
+	$('.wella1').show();
+	$('.wella2').show();
+	$('.wella3').show();
+	$('.wella4').show();
+	$('#startButton').hide();
+	});
+}
 
 function question1(){
 	$('.wellq1').empty().append('<div>Which of the following type of variable is visible everywhere in your JavaScript code?</div>');
@@ -50,7 +69,7 @@ function question1(){
 	$('.wella2').empty().append('<button value="no">Local variable</button>');
 	$('.wella3').empty().append('<button value="no">Both of the above</button>');
 	$('.wella4').empty().append('<button value="no">None of the above</button>');
-
+	
 	
 $('button').click(function(){
 	var x = $(this);
