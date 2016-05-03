@@ -1,0 +1,67 @@
+body{
+	background-image: url("../../assets/images/javascript.png"); ;
+}
+
+.page-header{
+	color: #F2EFF2;
+}
+
+.wrapper{
+	width: 980px;
+	margin: 0 auto;
+}
+
+.well-lg{
+	width: 900px;
+	margin: 0 auto;
+	color: rgb(249, 38, 114);
+	background-color: rgba(79, 76, 78, 0.8);
+	font-family: 'Droid Sans Mono', arial;
+	font-size: 22px;
+}
+
+.well-sm{
+	width: 900px;
+	margin: 0 auto;
+	color: rgb(230, 219, 116);
+	background-color: rgba(39, 40, 34, 0.7);
+	font-family: 'Droid Sans Mono', arial;
+	font-size: 18px;
+}
+
+.jumbotron{
+	background-color: rgba(39, 40, 34, 0.9);
+	border-radius: 5px;
+	color: #F2EFF2;
+	text-align: center;
+	font-family: 'Droid Sans Mono', arial;
+}
+
+#var{
+	color: rgb(102, 216, 238);
+}
+
+#equal{
+	color: rgb(249, 38, 114);
+}
+
+#js{
+	color: rgb(230, 219, 116);
+}
+
+.hoverOut{
+	background-color: rgba(39, 40, 34, 0.7);
+	color: rgb(230, 219, 116);
+}
+
+.hoverIn{
+	background-color: rgba(230, 219, 116, 0.7);
+	color: rgb(39, 40, 34);
+}
+
+button{
+	width: 880px;
+	margin: 0 auto;
+	background-color: transparent;
+	border: none;
+}
