@@ -66,19 +66,23 @@ function start(){
 function question1(){
 	$('.wellq1').empty().append('<div>Which of the following type of variable is visible everywhere in your JavaScript code?</div>');
 	$('.wella1').empty().append('<button class="right" value="yes">Global variable</button>');
-	$('.wella2').empty().append('<button value="no">Local variable</button>');
-	$('.wella3').empty().append('<button value="no">Both of the above</button>');
-	$('.wella4').empty().append('<button value="no">None of the above</button>');
+	$('.wella2').empty().append('<button class="wrong" value="no">Local variable</button>');
+	$('.wella3').empty().append('<button class="wrong" value="no">Both of the above</button>');
+	$('.wella4').empty().append('<button class="wrong" value="no">None of the above</button>');
 	
 	
 $('button').click(function(){
 	var x = $(this);
 	if(x.val() === "yes"){
+		$('.right').addClass('correct');
+		$('.wrong').removeClass('incorrect');
 		//correct++;
 		console.log(this.correct);
 		$('.answer').empty().append('Correct!!!');
 	}
 	else if(x.val() === 'no'){
+		$(this).addClass('incorrect').siblings().removeClass('incorrect');
+		$('.right').removeClass('correct');
 		//incorrect++;
 		console.log(this.incorrect);
 		$('.answer').empty().append('Nope!<br>The correct answer was: ' + $('button.right').text());	
@@ -89,7 +93,9 @@ $('button').click(function(){
 	}
 });
 
+}
 
+function reStart(){
 
 }
 
