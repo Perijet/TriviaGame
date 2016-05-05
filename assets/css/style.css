@@ -84,3 +84,9 @@ button{
 .incorrect{
 	background-color: red;
 }
+
+#timeLeft{
+	font-family: 'Droid Sans Mono', arial;
+	font-size: 28px;
+	
+}
