@@ -39,10 +39,10 @@ var start = {
 //game timer that starts, stops and reset the time. Timer also advances game to next question when time is zero and question not answered
 //Timer also shows the correct answer if the question is missed before advancing to the next question
 var timer = {
-  time:10,
+  time:30,
   reset: function(){
-    timer.time = 10;
-    $('#display').html('00:10');
+    timer.time = 30;
+    $('#display').html('00:30');
   },
   start: function(){
     counter = setInterval(timer.count, 1000);
