@@ -2,13 +2,14 @@ $(document).ready(function(){
 	start.hide();
 });
 
-
+//Object containing variables and elements for the start screen
 var start = {
 	correct: 0,
 	incorrect: 0,
 	unanswered: 0,
 	question: 0,
 
+//Elements containg questions and answers ar hidden to allow only start button and quiz title to show
 	hide: function(){
 	$('.start').append('<button  type="button" id="startButton">START</button>');
 	$('.wellq1').hide();
@@ -18,6 +19,8 @@ var start = {
 	$('.wella4').hide();
 	$('#timeLeft').hide();
 
+//Click function for the start button on the start page to start the game and show hidden elements containing questions and answers
+//The click function resets the game numbers and calls function question1 to begin the game
 	$('#startButton').click(function(){
 	reStart();
 	question1();
@@ -33,6 +36,8 @@ var start = {
 	},
 };
 
+//game timer that starts, stops and reset the time. Timer also advances game to next question when time is zero and question not answered
+//Timer also shows the correct answer if the question is missed before advancing to the next question
 var timer = {
   time:10,
   reset: function(){
@@ -75,6 +80,7 @@ var timer = {
 
 };
 
+//The start button and setTimeout checks the logic in this function to determine which of the question functions to call next
 function threeSeconds(){
 
  if(start.question === 0){
@@ -109,6 +115,7 @@ function threeSeconds(){
   timer.reset();
 }
 
+//This function determins which questions are right or wrong and advances the game and adds to the number of right or wrong answers
 function gameOn(){	
 	$('button').click(function(){	
 	var x = $(this);
@@ -132,7 +139,7 @@ function gameOn(){
 
 console.log(start.question);
 }
-
+//The following eight functions are called in chronological order by the threeSecond function
 function question1(){
 	$('.wellq1').empty().append('<div>Which of the following type of variable is visible everywhere in your JavaScript code?</div>');
 	$('.wella1').empty().append('<button class="right next" value="yes">Global variable</button>');
@@ -204,6 +211,7 @@ function question8(){
 	$('.answer').empty();
 }
 
+//This function displays the end of game page with the player stats and asks if the player wants to start over
 function endPage (){
 	//var startOverButton = this.startOverButton;
 	timer.stop();
@@ -216,6 +224,7 @@ function endPage (){
 
 }
 
+//This function is attached to the start button click event and is called to reset the game stats. 
 function reStart(){
 	start.correct = 0;
 	start.incorrect = 0;
